@@ -1,11 +1,12 @@
 package masterMind;
 
 import java.awt.Color;
+import java.util.Observable;
 
 
-public class Modèle {
+public class Modèle extends Observable{
 	
-	Color[] couleur;
+	static Color[] couleur;
 	int N_TENTATIVES;
 	static int difficulte;
 	enum Etat {EN_COUR, GAGNE, PERDU};
@@ -27,8 +28,16 @@ public class Modèle {
 		this.couleur[5] = (Color.ORANGE);
 		this.couleur[6] =(Color.WHITE);
 		this.couleur[7] = (Color.BLACK);
+		
+		this.combinaison = new Rangee();
+		this.combinaison.generation();
+		
+		this.proposition = new Rangee[0];
 	}
 	
-	
+	public void evaluer(Rangee[] P) {
+		
+
+	}
 
 }
