@@ -33,11 +33,19 @@ public class Modèle extends Observable{
 		this.combinaison.generation();
 		
 		this.proposition = new Rangee[0];
+		
+		this.etat = Etat.EN_COUR;
+		
+		this.tentative = 0;
 	}
 	
-	public void evaluer(Rangee[] P) {
-		
-
+	public void evaluer(Rangee P) {
+		this.proposition[tentative] = P;
+		for (int i=0; i<this.difficulte; i++) {
+			if (P.jetons[i] ==this.combinaison.jetons[i]) {
+				
+			}
+		}
 	}
 
 }
